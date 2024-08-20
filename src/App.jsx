@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {HashRouter} from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -35,9 +36,13 @@ function App() {
   }
 
   return (
+    <>
+      <HashRouter>
     <div className="h-max w-[100vw] flex justify-center item-center">
       <Tour tourData={tourData} a={removeHandler}></Tour>
     </div>
+        </HashRouter>
+    </>
   );
 }
 
